@@ -1,0 +1,15 @@
+dubbo:
+  application:
+    name: boot-user-service-provider
+  registry:
+    protocol: zookeeper
+    address: 47.104.80.23:2181
+  protocol:
+    name: dubbo
+    port: 20880
+  monitor:
+    protocol: registry
+  scan:
+    base-packages: com.provider.service.impl
+server:
+  port: 8090
