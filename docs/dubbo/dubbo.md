@@ -117,5 +117,12 @@ NIO(non-blocking-io)
 参考：https://blog.csdn.net/xiaojin21cen/article/details/79834222
 
 
+### zookeeper
 
+### 一、一致性
+
+强一致性：
+> - Paxos
+> - Raft(multi-paxos)
+> - ZAB(multi-paxos)
 

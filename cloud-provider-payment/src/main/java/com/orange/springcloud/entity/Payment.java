@@ -1,4 +1,4 @@
-package com.domain;
+package com.orange.springcloud.entity;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -9,13 +9,13 @@ import java.io.Serializable;
 /**
  * @author orangeC
  * @description
- * @date 2020/4/22 19:43
+ * @date 2020/4/23 16:24
  */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class User implements Serializable {
+public class Payment implements Serializable {
 
-    private int id;
-    private String name;
+    private Long id;
+    private String serial;
 }
