@@ -1,9 +1,10 @@
 package com.consumer.service.impl;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import com.domain.User;
+import com.service.OrderService;
 import com.service.UserService;
-import jdk.nashorn.internal.ir.annotations.Reference;
-import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
@@ -12,15 +13,14 @@ import java.util.List;
  * @description
  * @date 2020/4/22 20:17
  */
-@Reference
-public class OrderServiceImpl implements UserService{
+@Service
+public class OrderServiceImpl implements OrderService {
 
-    @Autowired
+    @Reference
     private UserService userService;
 
-
     @Override
-    public List<User> getUserList(String id) {
+    public List<User> get(String id) {
         return userService.getUserList(id);
     }
 }
