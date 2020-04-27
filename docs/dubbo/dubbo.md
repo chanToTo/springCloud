@@ -126,3 +126,25 @@ NIO(non-blocking-io)
 > - Raft(multi-paxos)
 > - ZAB(multi-paxos)
 
+强一致性算法——Paxos
+> - Client：系统外部角色，请求发起者，像民众
+> - Proposer：接收Client请求，向集群提供提议（propose），并再冲突发生时，启到冲突调节的作用，像议员，替民众提出议案
+> - Acceptor（Voter）：提议投票和接收者，只有在形成法定人数（Quorum，一般即为majority多数派（达到N/2数同意）时，提议才会最终被接受，像国会
+> - Learner：提议接受者，backup，备份，对集群一致性没什么影响，像记录员
+
+强一致性算法——multi-Paxos
+> - Leader：唯一的proposer，所有请求都需要经过此Leader
+
+![image](../../assets/dubbo/multi-paxos.jpg)
+
+Raft角色：
+> - Leader：leader节点
+> - Follower：follower节点
+> - Candidate：每个节点自己有一个timeout，在竞选leader的时候，timeout先结束的节点就将自己设置candidate状态，然后成为Leader
+
+
+
+
+
+
+
